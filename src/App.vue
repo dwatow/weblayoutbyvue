@@ -6,15 +6,21 @@
   </template>
 <template v-else>
    <div>
+     <p>name: {{forms.name}}</p>
+     <p>email: {{forms.email}}</p>
+     <p>phone_number: {{forms.phone_number}}</p>
+     <p v-if="forms.gender">gender: {{forms.gender}}</p>
      <form>
-       <input type="text" placeholder="Your Name">
-       <input type="email" placeholder="Your Email">
-       <input type="number" placeholder="Your Phone Number">
-       <input type="submit" value="Submit to me">
-       <select>
-        <option value="female">female</option>
-        <option value="male">male</option>
+       <input v-model="forms.name" type="text" placeholder="Your Name">
+       <input v-model="forms.email" type="email" placeholder="Your Email">
+       <input v-model="forms.phone_number" type="number" placeholder="Your Phone Number">
+       <select v-model="forms.gender">
+        <option disabled value="">what is your gender</option >
+        <option v-for="item in forms.genderoption" v-bind:value="item.key">{{item.key}}</option >
+        <!-- <option value="female">female</option>
+        <option value="male">male</option> -->
       </select>
+      <input type="submit" value="Submit to me">
     </form>
    </div>
 </template>
@@ -37,11 +43,15 @@ export default {
   data () {
     return {
       isForm: true,
-      form: {
+      forms: {
         name: '',
         email: '',
         phone_number: '',
-        sex: ''
+        gender: '',
+        genderoption: [
+          {key: 'male', value: '男'},
+          {key: 'female', value: '女'}
+        ]
       }
     }
   },
