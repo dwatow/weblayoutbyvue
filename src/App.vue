@@ -4,26 +4,9 @@
   <template v-if="isForm">
     <contentbox></contentbox>
   </template>
-<template v-else>
-   <div>
-     <p>name: {{forms.name}}</p>
-     <p>email: {{forms.email}}</p>
-     <p>phone_number: {{forms.phone_number}}</p>
-     <p v-if="forms.gender">gender: {{forms.gender}}</p>
-     <form>
-       <input v-model="forms.name" type="text" placeholder="Your Name">
-       <input v-model="forms.email" type="email" placeholder="Your Email">
-       <input v-model="forms.phone_number" type="number" placeholder="Your Phone Number">
-       <select v-model="forms.gender">
-        <option disabled value="">what is your gender</option >
-        <option v-for="item in forms.genderoption" v-bind:value="item.key">{{item.key}}</option >
-        <!-- <option value="female">female</option>
-        <option value="male">male</option> -->
-      </select>
-      <input type="submit" value="Submit to me">
-    </form>
-   </div>
-</template>
+  <template v-else>
+    <forms></forms>
+  </template>
 <footerbox></footerbox>
 </div>
 </template>
@@ -32,27 +15,19 @@
 import headbox from './components/Head.vue'
 import contentbox from './components/Content.vue'
 import footerbox from './components/Footer.vue'
+import forms from './components/Forms.vue'
 
 export default {
   name: 'app',
   components: {
     headbox,
     contentbox,
-    footerbox
+    footerbox,
+    forms
   },
   data () {
     return {
-      isForm: true,
-      forms: {
-        name: '',
-        email: '',
-        phone_number: '',
-        gender: '',
-        genderoption: [
-          {key: 'male', value: '男'},
-          {key: 'female', value: '女'}
-        ]
-      }
+      isForm: true
     }
   },
   methods: {

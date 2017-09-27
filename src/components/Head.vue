@@ -18,7 +18,7 @@
 
 <script>
 export default {
-  name: 'app',
+  name: 'headbox',
   methods: {
     toFormsPage: function () {
       this.$emit('toForms')
