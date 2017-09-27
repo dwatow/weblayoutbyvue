@@ -1,21 +1,5 @@
-# t1
 
-> A Vue.js project
-
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+做一個彈跳視窗，必須是一個components
+做vue router
+用t2版，home顯示大圖，Shop顯示白底，Sale顯示footer
+點擊時，網址會改，而且Shop/1顯示第一張圖，依此類推
