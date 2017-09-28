@@ -3,9 +3,9 @@
       <div id="navigation" class="clear_fix">
           <ul class="menu horizontal_list_initial">
               <li id="logo">PRETTY GAL</li>
-              <li class="menu_selected">Home</li>
-              <li>Shop</li>
-              <li>Sale</li>
+              <li class="menu_selected"  @click="selectItem">Home</li>
+              <li  @click="selectItem">Shop</li>
+              <li  @click="selectItem">Sale</li>
               <li>Customer Care</li>
               <li>Stockists</li>
           </ul>
@@ -16,7 +16,13 @@
 
 <script>
 export default {
-  name: 'navigation_background'
+  name: 'navigation_background',
+  methods: {
+    selectItem: function (e) {
+      console.log('selectItem');
+      this.$emit('selectPage', e.target.textContent)
+    }
+  }
 }
 </script>
 

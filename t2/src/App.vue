@@ -1,9 +1,9 @@
 <template>
 <div id="app">
-  <navigation></navigation>
-  <news></news>
-  <sale></sale>
-  <footerarea></footerarea>
+  <navigation @selectPage="tabSwitch"></navigation>
+  <news v-if="selectedNews"></news>
+  <sale v-if="selectedSale"></sale>
+  <footerarea v-if="selectedFooter"></footerarea>
 </div>
 </template>
 
@@ -15,12 +15,29 @@ import footerarea from "./footer.vue"
 
 export default {
   name: 'app',
+  components: {navigation, news, sale, footerarea},
   data() {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      tab: ''
     }
   },
-  components: {navigation, news, sale, footerarea}
+  computed: {
+    selectedNews: function (){
+      return this.tab === 'Home'
+    },
+    selectedSale: function () {
+      return this.tab === 'Shop'
+    },
+    selectedFooter: function () {
+      return this.tab === 'Sale'
+    }
+  },
+  methods: {
+    tabSwitch: function (targetPage) {
+      console.log(targetPage);
+      this.tab = targetPage
+    }
+  }
 }
 </script>
 
