@@ -1,0 +1,61 @@
+<template>
+  <div id="sale_actie">
+    <div class="text_center">
+      <div class="sale_year_round">
+        <h1>YEAR ROUND</h1>
+        <div class="hr_line"></div>
+        <h2>Must Have Items</h2>
+      </div>
+      <ul id="sale_img_list" class="horizontal_list_initial">
+        <li><img src="./assets/left.png" /></li>
+        <li><img src="./assets/middle.png" /></li>
+        <li><img src="./assets/right.png" /></li>
+      </ul>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'sale'
+}
+</script>
+
+<style>
+div#sale_actie {
+    margin: 70px auto;
+}
+
+#sale_img_list img {
+    height: 410px;
+}
+
+#sale_img_list li {
+    margin: 0 4px;
+}
+
+.text_center {
+    text-align: center;
+}
+
+div.sale_year_round h1{
+    font-family: serif;
+    font-size: 27pt;
+    letter-spacing: 5pt;
+    margin: 0 auto;
+}
+
+div.sale_year_round h2{
+    font-family: sans-serif;
+    font-size: 14pt;
+    letter-spacing: 5pt;
+    margin-bottom: 68px;
+}
+
+div.hr_line {
+    border-top: 1px black solid;
+    width: 30px;
+    margin: 30px auto;
+}
+
+</style>
