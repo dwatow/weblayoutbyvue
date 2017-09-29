@@ -7,15 +7,14 @@
         <h2>Must Have Items</h2>
       </div>
       <ul id="sale_img_list" class="horizontal_list_initial">
-        <li><img src="./assets/left.png" /></li>
-        <li><img src="./assets/middle.png" /></li>
-        <li><img src="./assets/right.png" /></li>
+        <li><router-view></router-view></li>
       </ul>
     </div>
   </div>
 </template>
 
 <script>
+
 export default {
   name: 'sale'
 }
