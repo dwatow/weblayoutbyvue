@@ -10,12 +10,10 @@ Vue.use(VueRouter)
 const img = {
   computed: {
     url: function () {
-      // url: `./src/assets/$route.params.id`
-      return  './src/assets/' + this.$route.params.imgName
+      return './src/assets/' + this.$route.params.imgName
     }
   },
   template: '<img :src=url />'
-  // template: "<img :src=$route.params.imgName />"
 }
 
 
