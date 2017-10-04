@@ -20,7 +20,7 @@ export default {
 
 <style>
 #news_background {
-    background-image: url(./assets/cover.jpg);
+    background-image: url(../assets/cover.jpg);
     background-position: center top;
     background-size: cover;
     background-repeat: no-repeat;
