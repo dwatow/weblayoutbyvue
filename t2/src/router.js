@@ -6,7 +6,6 @@ import footerarea from "./footer.vue"
 
 Vue.use(VueRouter)
 
-
 const img = {
   computed: {
     url: function () {
@@ -15,7 +14,6 @@ const img = {
   },
   template: '<img :src=url />'
 }
-
 
 const routes = [{
     path: '',
