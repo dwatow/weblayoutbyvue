@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import news from "./news.vue"
 import sale from "./sale.vue"
-import footerarea from "./footer.vue"
+import footerarea from "./components/footer.vue"
 
 Vue.use(VueRouter)
 

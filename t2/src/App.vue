@@ -1,6 +1,6 @@
 <template>
 <div id="app">
-  <navigation @selectPage="tabSwitch"></navigation>
+  <!-- <navigation @selectPagÇe="tabSwitch"></navigation> -->
   <router-view></router-view>
   <router-view name='a'></router-view>
   <router-view name='b'></router-view>
@@ -8,14 +8,15 @@
 </template>
 
 <script>
-import navigation from "./nav.vue"
+// import navigation from "./components/nav.vue"
 import news from "./news.vue"
 import sale from "./sale.vue"
-import footerarea from "./footer.vue"
+import footerarea from "./components/footer.vue"
 
 export default {
   name: 'app',
-  components: {navigation, news, sale, footerarea},
+  // components: {navigation, news, sale, footerarea},
+  components: {news, sale, footerarea},
   data() {
     return {
       tab: ''
