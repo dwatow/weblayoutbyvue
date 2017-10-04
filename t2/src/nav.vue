@@ -3,7 +3,7 @@
   <div id="navigation" class="clear_fix">
     <ul class="menu horizontal_list_initial">
       <li id="logo">PRETTY GAL</li>
-      <li class="menu_selected" @click="selectItem">Home</li>
+      <li><router-link to="/">Home</router-link></li>
       <li @click="selectItem"><router-link to="/news">Shop</router-link></li>
       <li @click="selectItem"><router-link to="/sale">Sale</router-link></li>
       <li @click="selectItem"><router-link to="/footerarea">Customer Care</router-link></li>

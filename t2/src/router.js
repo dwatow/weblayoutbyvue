@@ -17,15 +17,30 @@ const img = {
 }
 
 
-const routes = [
-  // { path: '', component: [news, sale, footerarea]}
-  { path: '/news', component: news},
-  { path: '/sale', component: sale,
-    children: [
-      { path: ':imgName', component: img }
-    ]
+const routes = [{
+    path: '',
+    components: {
+      default: news,
+      a: sale,
+      b: footerarea
+    }
   },
-  { path: '/footerarea', component: footerarea }
+  {
+    path: '/news',
+    component: news
+  },
+  {
+    path: '/sale',
+    component: sale,
+    children: [{
+      path: ':imgName',
+      component: img
+    }]
+  },
+  {
+    path: '/footerarea',
+    component: footerarea
+  }
 ]
 
 export const router = new VueRouter({

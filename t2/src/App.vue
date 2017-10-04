@@ -2,9 +2,8 @@
 <div id="app">
   <navigation @selectPage="tabSwitch"></navigation>
   <router-view></router-view>
-  <!-- <news v-if="selectedNews"></news>
-  <sale v-if="selectedSale"></sale>
-  <footerarea v-if="selectedFooter"></footerarea> -->
+  <router-view name='a'></router-view>
+  <router-view name='b'></router-view>
 </div>
 </template>
 
@@ -23,9 +22,6 @@ export default {
     }
   },
   computed: {
-    selectedNull: function () {
-      return this.tab === ''
-    },
     selectedNews: function () {
       return this.tab === 'Shop' || this.tab === ''
     },
